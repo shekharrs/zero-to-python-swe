@@ -91,6 +91,7 @@ acc1.credit(200)
 
 
 
+'''
 # Del Keyword - delete
 
 class SchoolData:
@@ -101,3 +102,37 @@ s1 = SchoolData("John")
 print(s1.first_name)
 del s1.first_name
 print(s1.first_name)
+'''
+
+
+
+
+
+# Private(like) attributes & methods
+'''
+Conceptual Implementations in Python
+Private attributes & methods are meant to be used only within the class and are not accessible from outside the class
+'''
+
+class Car:
+    wheels = 4              # CLASS attr (shared)
+    
+    def __init__(self, color, speed):
+        self.color = color          # PUBLIC instance attr
+        self.__speed = speed        # PRIVATE instance attr
+    
+    def display(self):          # PUBLIC method
+        return f"{self.color} car, Speed: {self.__speed}kmph"
+    
+    def accelerate(self, add_speed):
+        self.__speed += add_speed   # PRIVATE method access
+
+# Test
+c1 = Car("Red", 60)
+print(c1.color)        # Red ✓
+print(c1.display())    # Red car, Speed: 70kmph ✓
+# print(c1.__speed)    # ERROR!
+
+c1.accelerate(10)
+print(c1.display())
+print(f"Wheels: {c1.wheels}")
