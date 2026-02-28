@@ -54,6 +54,11 @@ s1.get_avg()
 s1.hello()
 '''
 
+
+
+
+
+'''
 # Create Account class with 2 attributes - balance & account no.
 # Create methods for debit, credit & printing the balance.
 
@@ -80,3 +85,19 @@ acc1 = Account(1000000, 12345)
 # print(acc1.account_no)
 acc1.debit(10000)
 acc1.credit(200)
+'''
+
+
+
+
+
+# Del Keyword - delete
+
+class SchoolData:
+    def __init__(self, fname):
+        self.first_name = fname
+
+s1 = SchoolData("John")
+print(s1.first_name)
+del s1.first_name
+print(s1.first_name)
