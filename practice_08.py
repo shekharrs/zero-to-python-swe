@@ -242,7 +242,9 @@ print(Person.name)
 
 
 
-# @property
+
+'''
+# @property : we use @property decorator on any method in the class to use the method in the class to use the method as a property
 class Student:
     def __init__(self, phy, chem, math):
         self.phy = phy
@@ -258,3 +260,10 @@ print(stu1.percentage)
 
 stu1.phy = 86
 print(stu1.percentage)
+'''
+
+
+
+
+
+# Polymorphism: Operator Overloading(when the same operator is allowed to have different meaning according to the context)
